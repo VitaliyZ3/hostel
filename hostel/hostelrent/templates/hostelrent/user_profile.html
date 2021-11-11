@@ -1,0 +1,19 @@
+{% extends 'hostelrent/base.html'%}
+{% block title %} Профиль {% endblock %}
+
+{% block main %}
+{% for order in orders %}
+
+<div class="card" style="width: 98%;">
+    <div class="card-body">
+      <h5 class="card-title text-success">Заброньований номер  - {{ order.room }},  на дату - {{ order.start_date }} </h5>
+      <h6 class="card-subtitle">Віртісь сумарна - {{ order.total_cost }}</h6>
+      <p class="card-text">Дата заїзду - {{ order.start_date }}</p>
+      <p class="card-text">Дата виїзду - {{ order.date_of_daparture }}</p>
+    </div>
+</div>
+
+<hr>
+
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "hostelrent/base.html" %}
+{% block title %}Log-in{% endblock %}
+{% load crispy_forms_tags %}
+{% block main %}
+<div class='center-div1'>
+    <div class='center-div2'>
+    <div class="login-form">
+        <form action="{% url 'login' %}" method="post">
+            {{ form|crispy }}
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ next }}"/>
+            <hr>
+            <p><input type="submit" value="Війти" class="btn btn-primary"></p>
+        </form>
+    </div>
+</div>
+</div>
+{% endblock %}  

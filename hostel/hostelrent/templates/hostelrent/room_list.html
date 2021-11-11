@@ -1,0 +1,37 @@
+{% extends 'hostelrent/base.html' %}
+{% block title %}Главная{% endblock title %}
+
+{% block main %}
+
+{% for room in object_list %}
+<hr>
+<hr>
+<div class="center-div1">
+    <div class="center-div2">
+    <div class="card" style="width: 90rem;">
+    <img src="/media/{{room.photo}}" class="card-img-top" alt="{{room.name}}">
+    <div class="card-body">
+      <h5 class="card-title">{{room.name}}</h5>
+      <p class="card-text">{{room.about}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Номер {{room.type_of_number}}</li>
+      <li class="list-group-item">Вартість за добу {{room.rent_pay}} грн</li>
+      <li class="list-group-item">Номер кімнати №{{room.number}} </li>
+    </ul>
+    {% if request.user.is_authenticated %}
+    <div class="card-body">
+      <a href="{% url 'selectdate' %}" class="card-link">Вибрати дату</a>
+    </div>
+    {% else %}
+    <div class="card-body">
+      <p >Для вибору дати потрібно <a href="{% url 'register' %}" class="card-link">зареєструватися  </a> або<a href="{% url 'login' %}" class="card-link">війти</a></p>
+    </div>
+
+ 
+    {% endif %}
+  </div>
+</div>
+</div>
+{% endfor %}
+{% endblock main%}

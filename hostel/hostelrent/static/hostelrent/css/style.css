@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+    padding: 0;
+
+}
+
+.Markermain{
+    font-family: 'Merriweather';
+    font-size: 30px;
+    text-align: left;
+    color: bisque;
+    text-decoration: none;
+    padding-left:  45%;
+}
+.Markermain:hover{
+    opacity: 90%;
+    color:#DF8B70;
+    text-decoration: none;
+}
+
+.center-div1{
+    display: flex;
+}
+.center-div2{
+    padding: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.navbar-item{
+    padding-left: 1%;
+    text-decoration: none;
+    color: rgb(236, 200, 155);
+}
+.navbar-item:hover{
+    text-decoration: none;
+    color: beige;
+}
+.navbar-item1{
+    color: burlywood;
+}
+.navbar-item1:hover{
+    color:cornsilk;
+}
+.navdiv{
+    
+    text-align: center;   
+}
+
+label.required::after {
+    content: ' *';
+    color: red;
+}
+
+

@@ -1,0 +1,13 @@
+{% extends "hostelrent/base.html" %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block main %}
+<div class='center-div1'>
+    <div class='center-div2'>
+    <h1>Ласкаво просимо {{ new_user.first_name }}!</h1>
+    <p>Ваш аккаунт успішно зареєстровано <a href="{% url 'login' %}">Війти</a>.</p>
+</div>
+</div>
+
+{% endblock %}

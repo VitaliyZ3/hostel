@@ -1,0 +1,22 @@
+{% extends 'hostelrent/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Оформления заказа{% endblock title %}
+
+{% block main %}
+
+<hr>
+<div class="center-div1">
+    <div class="center-div2">
+
+    <form method="post" >
+
+            {% csrf_token %}
+            {{ form|crispy }}
+            
+        <br>
+
+       <input type="submit" value="Зберегти" class="btn btn-primary">
+    </form>
+ </div> </div>
+ <hr>
+ {% endblock main%}
